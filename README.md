@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/brand/logo.png" width="240" alt="YT Blaze logo" />
+<img src="assets/brand/logo.png" width="360" alt="YT Blaze logo" />
 
 # YT BLAZE
 
@@ -8,8 +8,11 @@
 
 aria2's 16-connection engine · yt-dlp resolution · a native Go desktop app that never breaks a sweat.
 
-[![Download for Windows](https://img.shields.io/badge/%E2%AC%87%20DOWNLOAD%20FOR%20WINDOWS-ff6414?style=for-the-badge&logo=windows11&logoColor=white)](https://github.com/DERYK-RYLOY/yt-blaze/releases/latest)
-[![Star the repo](https://img.shields.io/badge/STAR%20THIS%20REPO-111111?style=for-the-badge&logo=github&logoColor=white)](https://github.com/DERYK-RYLOY/yt-blaze/stargazers)
+<a href="https://github.com/DERYK-RYLOY/yt-blaze/releases/latest"><img src="assets/brand/download-button.png" width="540" alt="Download YT Blaze for Windows" /></a>
+
+<a href="https://github.com/DERYK-RYLOY/yt-blaze/releases/download/v1.4.0/YT.Blaze.exe"><img src="assets/brand/portable-button.png" width="430" alt="YT Blaze portable exe" /></a>
+
+<sub><b>v1.4.0 — first public release</b> &nbsp;·&nbsp; Windows 10/11 x64 &nbsp;·&nbsp; installer + portable</sub>
 
 <br/>
 
@@ -19,6 +22,8 @@ aria2's 16-connection engine · yt-dlp resolution · a native Go desktop app tha
 ![Go](https://img.shields.io/badge/Go-1.27-00ADD8?style=flat-square&logo=go&logoColor=white)
 ![Wails](https://img.shields.io/badge/Wails-v2-e8332a?style=flat-square)
 ![aria2](https://img.shields.io/badge/aria2-16%20connections-111111?style=flat-square)
+[![Latest release](https://img.shields.io/github/v/release/DERYK-RYLOY/yt-blaze?style=flat-square&color=ff6414&label=release)](https://github.com/DERYK-RYLOY/yt-blaze/releases)
+[![Downloads](https://img.shields.io/github/downloads/DERYK-RYLOY/yt-blaze/total?style=flat-square&color=111111)](https://github.com/DERYK-RYLOY/yt-blaze/releases)
 [![Stars](https://img.shields.io/github/stars/DERYK-RYLOY/yt-blaze?style=flat-square&color=ff6414)](https://github.com/DERYK-RYLOY/yt-blaze/stargazers)
 
 </div>
@@ -38,6 +43,19 @@ aria2's 16-connection engine · yt-dlp resolution · a native Go desktop app tha
 Most downloaders open a single connection and hope for the best. Blaze splits every file into segments and pulls them **16 at a time** through aria2's engine — the same trick professional download managers use, wrapped in a native desktop app that actually looks like something from this decade.
 
 </div>
+
+<br/>
+
+## ▸ Latest release — v1.4.0
+
+**The first public release is live.** The 16× parallel engine, in an installer.
+
+[**Download the installer**](https://github.com/DERYK-RYLOY/yt-blaze/releases/download/v1.4.0/ytblaze-desktop-amd64-installer.exe) &nbsp;·&nbsp; [Portable .exe](https://github.com/DERYK-RYLOY/yt-blaze/releases/download/v1.4.0/YT.Blaze.exe) &nbsp;·&nbsp; [Release notes](https://github.com/DERYK-RYLOY/yt-blaze/releases/tag/v1.4.0)
+
+- 16-connection aria2 engine with resume
+- Live engine-accurate progress and size estimates
+- AUDIO ONLY — MP3 320 / M4A / OPUS / AAC
+- Themed installer, flame icon, zero console windows
 
 ---
 
@@ -61,9 +79,24 @@ And because the final step is a **stream copy** (`ffmpeg -c copy`), the file you
 
 <br/>
 
-<div align="center">
-  <img src="assets/brand/banner-speed.jpg" width="76%" alt="16x parallel engine, speed meter, video and audio quality" />
-</div>
+<table>
+<tr>
+<td width="58%" valign="middle">
+
+<h3>16× parallel. Every file.</h3>
+
+<p><strong>aria2</strong> splits the download into segments and fetches them concurrently instead of waiting on one slow stream. <strong>yt-dlp</strong> hands it the exact formats YouTube serves, and <strong>FFmpeg</strong> merges them without re-encoding.</p>
+
+<p>Pick a quality, watch the real speed climb, and let the engine do the rest.</p>
+
+</td>
+<td width="42%" align="center">
+
+<img src="assets/brand/banner-speed.jpg" width="330" alt="16x parallel engine, speed meter, video and audio quality" />
+
+</td>
+</tr>
+</table>
 
 <br/>
 
@@ -86,7 +119,7 @@ Live speed, ETA, byte count and filename streamed from the engine over SSE. The 
 <td width="50%" valign="top">
 
 **📦 Every container**
-MP4, WEBM, MKV — or `raw` when you want the untouched source streams.
+MP4, WEBM, MKV — or <code>raw</code> when you want the untouched source streams.
 
 **🧠 Smart estimates**
 Pick a quality and Blaze tells you the size before you commit — including converted audio sizes.
@@ -103,16 +136,16 @@ Wails + WebView2, dark native title bar, no console boxes, no Electron bloat, no
 Recent links are stored locally; click to re-run a download.
 
 **🛡 Safe by design**
-The API binds to `127.0.0.1` only, on a random free port, with a per-launch aria2 secret.
+The API binds to <code>127.0.0.1</code> only, on a random free port, with a per-launch aria2 secret.
 
 **📂 Files where you expect**
-Everything lands in `Downloads\YT Blaze`.
+Everything lands in <code>Downloads\YT Blaze</code>.
 
 </td>
 <td width="50%" valign="top">
 
-**🔁 Self-healing tools**
-First launch provisions yt-dlp, FFmpeg and aria2 into your profile — updates when they need to.
+**🔁 Always current**
+yt-dlp and FFmpeg keep themselves updated, so YouTube changes don't break your downloads.
 
 **🎨 Designed, not themed**
 A dark gradient stage, glass panels, pixel display type and a scan-of-light animation that sweeps the logo only while a download is running.
@@ -134,8 +167,6 @@ Source included. Fork it, learn from it, ship your own.
 2. Run it. Windows SmartScreen may warn because the build is unsigned — choose **More info → Run anyway**.
 3. Launch **YT Blaze** from the Start Menu or desktop shortcut.
 4. Paste a YouTube link, pick a format and quality, hit **GO**.
-
-On first launch Blaze provisions its engines (yt-dlp, FFmpeg, aria2) into your user profile and the WebView2 runtime if it's missing. Nothing else to install.
 
 ### The source way
 
@@ -168,7 +199,6 @@ build/bin/ytblaze-desktop-amd64-installer.exe # the installer
 ![JavaScript](https://img.shields.io/badge/JavaScript-f7df1e?style=for-the-badge&logo=javascript&logoColor=111)
 ![HTML5](https://img.shields.io/badge/HTML5-e34f26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-22a7d8?style=for-the-badge&logo=css3&logoColor=white)
-![PowerShell](https://img.shields.io/badge/PowerShell-5391fe?style=for-the-badge&logo=powershell&logoColor=white)
 ![NSIS](https://img.shields.io/badge/NSIS-111111?style=for-the-badge)
 
 ![Wails](https://img.shields.io/badge/Wails_v2-e8332a?style=for-the-badge&logo=go&logoColor=white)
@@ -207,105 +237,6 @@ flowchart LR
 </div>
 
 <br/>
-
-## ▸ Local API
-
-The desktop UI and the headless server share one backend. Useful if you want to script it.
-
-| Method | Route | Purpose |
-| :--- | :--- | :--- |
-| `GET` | `/api/health` | status, version, which engines are live |
-| `POST` | `/api/estimate` | resolve a URL and size every quality/audio variant |
-| `POST` | `/api/download` | start a download `{ url, container, quality, audio_only, audio }` |
-| `DELETE` | `/api/downloads/:id` | cancel |
-| `GET` | `/api/progress` | one-shot progress snapshot |
-| `GET` | `/api/progress/stream` | SSE live progress |
-| `GET` / `DELETE` | `/api/history` | list / clear recent links |
-
-```bash
-curl -s -X POST http://127.0.0.1:8080/api/estimate \
-  -H "Content-Type: application/json" \
-  -d '{"url":"https://www.youtube.com/watch?v=jNQXAC9IVRw"}'
-```
-
----
-
-## ▸ FAQ
-
-<details>
-<summary><b>Where do my downloads go?</b></summary>
-
-`%USERPROFILE%\Downloads\YT Blaze`. Open it from the folder icon in the app.
-</details>
-
-<details>
-<summary><b>Why does SmartScreen warn me?</b></summary>
-
-The installer isn't code-signed yet, so Windows shows the standard "unknown publisher" prompt. The source is here — build it yourself if you prefer.
-</details>
-
-<details>
-<summary><b>Why not just use a browser extension?</b></summary>
-
-Browsers download one stream, one connection, and often can't mux separate video/audio tracks at all. Blaze resolves the real streams, downloads them 16-way in parallel, and merges them losslessly.
-</details>
-
-<details>
-<summary><b>Is the size estimate exact?</b></summary>
-
-It's exact when YouTube publishes a byte size for the stream, and a bitrate × duration estimate otherwise. Audio sizes match the converted file you'll actually get.
-</details>
-
-<details>
-<summary><b>Downloading fails on a specific video?</b></summary>
-
-YouTube changes things regularly. yt-dlp updates itself on launch; if it still fails, open an issue with the URL.
-</details>
-
-<details>
-<summary><b>Can I use it without the desktop app?</b></summary>
-
-Yes. `go run ./fastdl/cmd/server` serves the same API (and the server UI) on `127.0.0.1:8080`.
-</details>
-
----
-
-## ▸ Project layout
-
-```
-yt-blaze/
-├─ main.go                     # Wails shell, window options, bindings
-├─ frontend/                   # the UI (HTML, CSS, JS — no framework)
-│  ├─ index.html
-│  ├─ styles.css
-│  ├─ app.js
-│  └─ assets/                  # logo + fonts
-├─ fastdl/                     # the download engine (importable Go module)
-│  ├─ backend.go               # Gin API, SSE progress hub
-│  ├─ resolve.go               # yt-dlp format selection
-│  ├─ estimate.go              # size estimates per quality
-│  ├─ download.go              # aria2 + native download pipeline
-│  ├─ aria2.go                 # RPC daemon lifecycle
-│  ├─ setup.go                 # tool provisioning
-│  └─ cmd/server/              # headless server
-├─ build/                      # icons, manifest, NSIS installer theme
-└─ assets/brand/               # the artwork in this README
-```
-
----
-
-## ▸ Roadmap
-
-- [x] 16-connection aria2 engine
-- [x] Live engine-accurate progress
-- [x] Audio-only mode with estimates
-- [x] Dark native UI + flame icon
-- [x] Themed NSIS installer
-- [ ] Code signing certificate
-- [ ] Playlist downloads
-- [ ] Winget manifest
-
----
 
 <div align="center">
 
