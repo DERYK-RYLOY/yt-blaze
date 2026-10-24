@@ -1,0 +1,19 @@
+# Wails build outputs
+build/bin
+build/dist
+build/windows
+build/appicon.png
+build/icon.ico
+*.exe
+*.exe~
+
+# Go
+/vendor
+*.test
+
+# IDE
+.vscode
+.idea
+
+# OS
+Thumbs.db
