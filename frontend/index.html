@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YT Blaze</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="stage">
+    <span class="corner c-tl"></span>
+    <span class="corner c-tr"></span>
+    <span class="corner c-bl"></span>
+    <span class="corner c-br"></span>
+    <div class="glow" aria-hidden="true"></div>
+
+    <!-- ======== top strip: hero + tools ======== -->
+    <div class="top-strip">
+      <div class="hero-slot"><h1 class="hero">YT BLAZE</h1></div>
+      <div class="tools">
+        <button class="tool-btn" id="btn-logs" title="Open downloads folder">
+          <svg width="13" height="13" viewBox="0 0 14 14"><rect x="1" y="2" width="12" height="10" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.3"/><line x1="4" y1="5" x2="10" y2="5" stroke="currentColor" stroke-width="1.3"/><line x1="4" y1="8" x2="10" y2="8" stroke="currentColor" stroke-width="1.3"/></svg>
+        </button>
+        <button class="tool-btn" id="btn-info" title="Info">
+          <svg width="13" height="13" viewBox="0 0 14 14"><circle cx="7" cy="7" r="6" fill="none" stroke="currentColor" stroke-width="1.3"/><line x1="7" y1="6" x2="7" y2="10.5" stroke="currentColor" stroke-width="1.5"/><circle cx="7" cy="3.6" r="0.9" fill="currentColor"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- ======== three-zone main ======== -->
+    <div class="main-zone">
+
+      <!-- left zone -->
+      <div class="zone-left">
+        <section class="panel about-panel">
+          <div class="panel-title">ABOUT</div>
+          <p class="about-text">Built by <b>DERYK RYLOY</b> - The speed comes from aria2 downloading with 16 parallel connections at once, not go-ytdlp. Concrete fast.</p>
+        </section>
+        <div class="url-bar">
+          <svg width="14" height="14" viewBox="0 0 16 16"><path d="M6.5 9.5l3-3M5.5 8L4 9.5a2.1 2.1 0 003 3L8.5 11M10.5 8L12 6.5a2.1 2.1 0 00-3-3L7.5 5" stroke="#7a8091" stroke-width="1.3" fill="none" stroke-linecap="round"/></svg>
+          <input type="text" id="url-input" placeholder="Paste URL here" spellcheck="false" autocomplete="off">
+        </div>
+      </div>
+
+      <!-- center zone -->
+      <div class="zone-center">
+        <div class="chips" id="format-btns">
+          <button class="chip fmt active" data-format="mp4">MP4</button>
+          <button class="chip fmt" data-format="webm">WEBM</button>
+          <button class="chip fmt" data-format="mkv">MKV</button>
+          <button class="chip fmt wide mono" data-format="raw">raw formats</button>
+          <span class="chips-sep" aria-hidden="true"></span>
+          <button class="chip fmt audio-toggle" id="audio-only" title="Download audio only (MP3/M4A/OPUS/AAC)">AUDIO ONLY</button>
+        </div>
+
+        <div class="logo-wrap" id="logo-wrap">
+          <div class="logo-box">
+            <img src="assets/logo.png" alt="YT Blaze" class="logo" draggable="false">
+            <div class="fx" aria-hidden="true"><span class="scan"></span></div>
+          </div>
+        </div>
+
+        <!-- real progress: only visible while downloading -->
+        <div class="progress" id="progress">
+          <div class="progress-caption" id="progress-caption"></div>
+          <div class="progress-track">
+            <div class="progress-fill" id="progress-fill"></div>
+          </div>
+        </div>
+
+        <button class="go-btn" id="go-btn"><span class="go-text" id="go-text">GO</span></button>
+        <div class="size-hint" id="size-hint"></div>
+        <div class="status-line" id="status-line"></div>
+      </div>
+
+      <!-- right zone -->
+      <div class="zone-right">
+        <aside class="panel history-panel">
+          <div class="panel-head">
+            <span class="panel-title">HISTORY</span>
+            <button class="reset-btn" id="btn-reset">RESET<br>CLEAR</button>
+          </div>
+          <ul class="history-list" id="history-list">
+            <li class="history-empty">No downloads yet</li>
+          </ul>
+        </aside>
+
+        <aside class="quality-cols">
+          <div class="qcol">
+            <div class="qcol-title">VIDEO QUALITY</div>
+            <div class="qbtns" id="video-quality">
+              <button class="chip q active" data-q="4k">4K</button>
+              <button class="chip q" data-q="1080p">1080p</button>
+              <button class="chip q" data-q="720p">720p</button>
+              <button class="chip q" data-q="480p">480p</button>
+              <button class="chip q" data-q="360p">360p</button>
+            </div>
+          </div>
+          <div class="qcol">
+            <div class="qcol-title">AUDIO QUALITY</div>
+            <div class="qbtns" id="audio-quality">
+              <button class="chip q tall active" data-a="mp3">MP3<br>320kbps</button>
+              <button class="chip q" data-a="m4a">M4A</button>
+              <button class="chip q" data-a="opus">OPUS</button>
+              <button class="chip q" data-a="aac">AAC</button>
+            </div>
+          </div>
+        </aside>
+        <div class="footer">DERYK RYLOY&nbsp;&nbsp;&bull;&nbsp;&nbsp;THE CREATOR AND VISIONARY</div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

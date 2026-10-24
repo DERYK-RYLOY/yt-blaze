@@ -1,0 +1,20 @@
+{
+  "$schema": "https://wails.io/schemas/config.v2.json",
+  "name": "ytblaze-desktop",
+  "outputfilename": "YT Blaze",
+  "frontend:dir": "frontend",
+  "frontend:install": "",
+  "frontend:build": "",
+  "frontend:dev:watcher": "",
+  "author": {
+    "name": "DERYK RYLOY",
+    "email": ""
+  },
+  "info": {
+    "companyName": "YT Blaze",
+    "productName": "YT Blaze",
+    "productVersion": "1.4.0",
+    "copyright": "Copyright 2026 DERYK RYLOY",
+    "comments": "Super-fast YouTube downloader powered by aria2 + yt-dlp"
+  }
+}

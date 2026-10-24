@@ -1,19 +1,22 @@
 # Wails build outputs
-build/bin
-build/dist
-build/windows
-build/appicon.png
-build/icon.ico
+build/bin/
+build/dist/
+build/windows/installer/tmp/
+
+# Compiled binaries
 *.exe
 *.exe~
+*.dll
+*.test
 
 # Go
 /vendor
-*.test
 
-# IDE
-.vscode
-.idea
+# Design working files
+logo-src.png
 
-# OS
+# IDE / OS
+.vscode/
+.idea/
 Thumbs.db
+.DS_Store
